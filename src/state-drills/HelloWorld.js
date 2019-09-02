@@ -8,9 +8,9 @@ export default class HelloWorld extends Component {
         }
     }
 
-    handleClick = () => {
+    handleClick = (event) => {
         this.setState({
-            who: className
+            who: event.currentTarget.className
         }) 
     }
 
