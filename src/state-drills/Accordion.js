@@ -6,22 +6,23 @@ export default class Accordion extends Component {
     };
     
     state = {
-        currentSection: 0,
+        currentSectionIndex: 0,
     }
 
     handleButtonClick(index) {
         this.setState({
-            currentSection: index,
-        })
+            currentSectionIndex: index,
+        }) 
+        console.log({index},' has been clicked')
     }
 
     renderSection() {
-        const currentSection = this.props.sections[this.state.currentSection]
-        return (
-            <p className="content">
-                {currentSection.content}
-            </p>
-        )
+        const currentSection = this.props.sections[this.state.currentSectionIndex]
+            return (
+                <p className="content">
+                    {currentSection.content}
+                </p>
+            )  
     }
 
     renderButtons() {
@@ -30,9 +31,8 @@ export default class Accordion extends Component {
                 <button key={index} onClick={() => this.handleButtonClick(index)}>
                     {section.title} 
                 </button>   
-                </li>
-        ))
-        
+            </li>
+        ))   
     }
     
     render() {
