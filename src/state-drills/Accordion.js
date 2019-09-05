@@ -1,46 +1,42 @@
 import React, { Component } from 'react';
 
 export default class Accordion extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            activeSectionIndex: null,
+        };
+    }
+
     static defaultProps = {
         sections: [],
     };
     
-    state = {
-        currentSectionIndex: 0,
-    }
-
-    handleButtonClick(index) {
+    handleButtonClick = (index) => {
         this.setState({
-            currentSectionIndex: index,
+            activeSectionIndex: index,
         }) 
         console.log({index},' has been clicked')
     }
 
-    renderSection() {
-        const currentSection = this.props.sections[this.state.currentSectionIndex]
-            return (
-                <p className="content">
-                    {currentSection.content}
-                </p>
-            )  
-    }
-
-    renderButtons() {
-        return this.props.sections.map((section, index) => (
-            <li>
-                <button key={index} onClick={() => this.handleButtonClick(index)}>
+    renderSections(section, index, activeSectionIndex) {
+        return (
+            <li className='AccordionItem' key={index}>
+                <button type='button' onClick={() => this.handleButtonClick(index)}>
                     {section.title} 
-                </button>   
+                </button> 
+                {(activeSectionIndex === index) && <p>{section.content}</p>}  
             </li>
-        ))   
+        )   
     }
     
     render() {
-        
+        const { activeSectionIndex } = this.state
+        const { sections } = this.props
         return (
-            <ul>
-                {this.renderButtons()}
-                {!!this.props.sections.length &&this.renderSection()}
+            <ul className='Accordion'>
+                {sections.map((section, index) => this.renderSections(section, index, activeSectionIndex)
+                )}
             </ul>
         )
     }
