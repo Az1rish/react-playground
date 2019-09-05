@@ -10,9 +10,9 @@ export default class Accordion extends Component {
     }
 
     handleButtonClick(index) {
-        this.setState = {
+        this.setState({
             currentSection: index,
-        }
+        })
     }
 
     renderSection() {
@@ -30,9 +30,9 @@ export default class Accordion extends Component {
                 <button key={index} onClick={() => this.handleButtonClick(index)}>
                     {section.title} 
                 </button>   
-                
-            </li>
+                </li>
         ))
+        
     }
     
     render() {
@@ -40,7 +40,7 @@ export default class Accordion extends Component {
         return (
             <ul>
                 {this.renderButtons()}
-                {!!this.props.sections.length &&this.renderSection()} 
+                {!!this.props.sections.length &&this.renderSection()}
             </ul>
         )
     }
