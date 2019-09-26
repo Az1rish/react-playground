@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Accordion from './state-drills/Accordion';
-/*import Tabs from './state/Tabs';
+import DemonymApp from './demonymapp/demonymApp';
+/*import Accordion from './state-drills/Accordion';
+import Tabs from './state/Tabs';
 import Split from './composition/Split';
 import './App.css';
 import Tooltip from './composition/Tooltip';
@@ -32,7 +33,7 @@ const tabsProp = [
     content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
   { name: 'Third tab',
     content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.'},
-];*/
+];
 
 // array of objects for use with the Accordion component
 const sections = [
@@ -48,15 +49,15 @@ const sections = [
     title: 'Section 3',
     content: 'Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?',
   },
-]
+]*/
 
 export default class App extends Component {
   render() {
-    return <div>
-      {/*<Tabs tabs={tabsProp} />*/}
-      <Accordion sections={sections} />
-    </div>
-  }
+    return (
+      <div className="App">
+        <DemonymApp />
+      </div>
+    )}
 }
 
 /*function App() {

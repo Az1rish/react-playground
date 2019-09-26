@@ -1,71 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs Component closes the first tab and opens any clicked tab 1`] = `
-<ul>
-  <li>
+<ul
+  className="Accordion"
+>
+  <li
+    className="AccordionItem"
+    key="0"
+  >
     <button
-      key="0"
       onClick={[Function]}
+      type="button"
     >
       Section 1
     </button>
   </li>
-  <li>
+  <li
+    className="AccordionItem"
+    key="1"
+  >
     <button
-      key="1"
       onClick={[Function]}
+      type="button"
     >
       Section 2
     </button>
+    <p>
+      Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+    </p>
   </li>
-  <li>
+  <li
+    className="AccordionItem"
+    key="2"
+  >
     <button
-      key="2"
       onClick={[Function]}
+      type="button"
     >
       Section 3
     </button>
   </li>
-  <p
-    className="content"
-  >
-    Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
-  </p>
 </ul>
 `;
 
-exports[`Tabs Component renders empty given no tabs 1`] = `<ul />`;
+exports[`Tabs Component renders empty given no tabs 1`] = `
+<ul
+  className="Accordion"
+/>
+`;
 
 exports[`Tabs Component renders the first tab by default 1`] = `
-<ul>
-  <li>
+<ul
+  className="Accordion"
+>
+  <li
+    className="AccordionItem"
+    key="0"
+  >
     <button
-      key="0"
       onClick={[Function]}
+      type="button"
     >
       Section 1
     </button>
   </li>
-  <li>
+  <li
+    className="AccordionItem"
+    key="1"
+  >
     <button
-      key="1"
       onClick={[Function]}
+      type="button"
     >
       Section 2
     </button>
   </li>
-  <li>
+  <li
+    className="AccordionItem"
+    key="2"
+  >
     <button
-      key="2"
       onClick={[Function]}
+      type="button"
     >
       Section 3
     </button>
   </li>
-  <p
-    className="content"
-  >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </p>
 </ul>
 `;
