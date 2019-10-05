@@ -59,6 +59,15 @@ export default class RegistrationForm extends Component {
         }
       }
 
+      validateRepeatPassword() {
+        const repeatPassword = this.state.repeatPassword.value.trim();
+        const password = this.state.password.value.trim();
+    
+        if (repeatPassword !== password) {
+          return 'Passwords do not match';
+        }
+      }
+
     render () {
         return (
           <form 
