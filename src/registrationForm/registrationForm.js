@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
 
+
 export default class RegistrationForm extends Component {
+    constructor(props) {
+        super(props);
+        this.nameInput = React.createRef();
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const name = this.nameInput.current.value;
+        const password = e.target.password.value;
+        console.log('Name: ', name);
+        console.log('Password: ', password);
+    }
+
     render () {
         return (
-          <form className="registration">
+          <form 
+            className="registration"
+            onSubmit={e => this.handleSubmit(e)}>
             <h2>Register</h2>
             <div className="registration__hint">* required field</div>  
             <div className="form-group">
@@ -11,7 +27,9 @@ export default class RegistrationForm extends Component {
               <input 
                 type="text" className="registration__control"
                 name="name" 
-                id="name"/>
+                id="name"
+                ref={this.nameInput}
+                defaultValue='Frank' />
             </div>
             <div className="form-group">
                <label htmlFor="password">Password *</label>

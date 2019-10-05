@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppLang from './lang-context/AppLang';
+import RegistrationForm from './registrationForm/registrationForm';
 import './index.css';
 
 
 ReactDOM.render(
-    <AppLang />, 
+    <RegistrationForm />, 
     document.getElementById('root')
 );
