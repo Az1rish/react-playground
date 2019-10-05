@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RegistrationForm from './registrationForm/registrationForm';
+import App from './playingwithdanger/App';
 import './index.css';
 
 
 ReactDOM.render(
-    <RegistrationForm />, 
+    <App />, 
     document.getElementById('root')
 );
